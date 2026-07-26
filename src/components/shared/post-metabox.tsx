@@ -34,9 +34,9 @@ const categories = [
 const allTags = ["zakat", "qurban", "puasa", "haji", "sedekah", "shalat", "kajian"]
 
 const authors = [
-  { value: "ahmad", label: "Ahmad Fauzi" },
-  { value: "budi", label: "Budi Santoso" },
-  { value: "citra", label: "Citra Dewi" },
+  { value: "contoh_author_01", label: "Contoh_Nama_01" },
+  { value: "contoh_author_02", label: "Contoh_Nama_02" },
+  { value: "contoh_author_03", label: "Contoh_Nama_03" },
 ]
 
 export function PostMetabox({

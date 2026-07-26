@@ -17,18 +17,18 @@ interface Post {
 }
 
 const dummy: Post[] = [
-  { id: 1, title: "Keutamaan Berkurban di Hari Raya", author: "Ahmad Fauzi", status: "published", date: "01/06/2026" },
-  { id: 2, title: "Panduan Zakat Fitrah Lengkap", author: "Budi Santoso", status: "draft", date: "-" },
-  { id: 3, title: "Tata Cara Shalat Idul Fitri", author: "Citra Dewi", status: "archived", date: "15/05/2026" },
-  { id: 4, title: "Hikmah Ibadah Haji bagi Umat Islam", author: "Deni Pratama", status: "published", date: "20/05/2026" },
-  { id: 5, title: "Keistimewaan Bulan Ramadhan", author: "Ahmad Fauzi", status: "published", date: "10/05/2026" },
-  { id: 6, title: "Doa-doa Mustajab di Bulan Dzulhijjah", author: "Citra Dewi", status: "published", date: "25/05/2026" },
-  { id: 7, title: "Tips Menjaga Kekhusyukan Shalat", author: "Budi Santoso", status: "draft", date: "-" },
-  { id: 8, title: "Sejarah Masjid Nabawi", author: "Deni Pratama", status: "archived", date: "01/04/2026" },
-  { id: 9, title: "Pentingnya Silaturahmi dalam Islam", author: "Ahmad Fauzi", status: "published", date: "28/05/2026" },
-  { id: 10, title: "Jadwal Kajian Rutin Bulan Ini", author: "Budi Santoso", status: "draft", date: "-" },
-  { id: 11, title: "Fikih Muamalah untuk Pemula", author: "Citra Dewi", status: "published", date: "18/05/2026" },
-  { id: 12, title: "Keajaiban Sedekah di Waktu Subuh", author: "Deni Pratama", status: "published", date: "05/05/2026" },
+  { id: 1, title: "Keutamaan Berkurban di Hari Raya", author: "Contoh_Nama_01", status: "published", date: "01/06/2026" },
+  { id: 2, title: "Panduan Zakat Fitrah Lengkap", author: "Contoh_Nama_02", status: "draft", date: "-" },
+  { id: 3, title: "Tata Cara Shalat Idul Fitri", author: "Contoh_Nama_03", status: "archived", date: "15/05/2026" },
+  { id: 4, title: "Hikmah Ibadah Haji bagi Umat Islam", author: "Contoh_Nama_04", status: "published", date: "20/05/2026" },
+  { id: 5, title: "Keistimewaan Bulan Ramadhan", author: "Contoh_Nama_01", status: "published", date: "10/05/2026" },
+  { id: 6, title: "Doa-doa Mustajab di Bulan Dzulhijjah", author: "Contoh_Nama_03", status: "published", date: "25/05/2026" },
+  { id: 7, title: "Tips Menjaga Kekhusyukan Shalat", author: "Contoh_Nama_02", status: "draft", date: "-" },
+  { id: 8, title: "Sejarah Masjid Nabawi", author: "Contoh_Nama_04", status: "archived", date: "01/04/2026" },
+  { id: 9, title: "Pentingnya Silaturahmi dalam Islam", author: "Contoh_Nama_01", status: "published", date: "28/05/2026" },
+  { id: 10, title: "Jadwal Kajian Rutin Bulan Ini", author: "Contoh_Nama_02", status: "draft", date: "-" },
+  { id: 11, title: "Fikih Muamalah untuk Pemula", author: "Contoh_Nama_03", status: "published", date: "18/05/2026" },
+  { id: 12, title: "Keajaiban Sedekah di Waktu Subuh", author: "Contoh_Nama_04", status: "published", date: "05/05/2026" },
 ]
 
 const statusColors: Record<string, "default" | "outline" | "secondary" | "destructive"> = {

@@ -6,15 +6,15 @@ import { Button } from "@/components/ui/button"
 
 function HeroSection() {
   return (
-    <section className="relative overflow-hidden px-4 py-16 sm:py-24">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
+    <section className="relative overflow-hidden px-4 md:px-8 lg:px-16 xl:px-24 py-16 sm:py-24">
+      <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
         <div className="space-y-6 text-center lg:text-left">
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
             Mudahkan Ibadah,
             <br />
             <span className="text-primary">Berdayakan Umat</span>
           </h1>
-          <p className="mx-auto max-w-lg text-muted-foreground lg:mx-0">
+          <p className="mx-auto max-w-xl text-muted-foreground lg:mx-0">
             Kelola zakat, qurban, dan dakwah masjid Anda dalam satu platform
             terpadu. Mudah, transparan, dan berkah.
           </p>

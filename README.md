@@ -1,4 +1,3 @@
-```markdown
 # Masjidfy Frontend
 
 Antarmuka pengguna untuk **Masjidfy** — platform manajemen masjid digital yang mencakup modul Qurban, Zakat, Blog, serta Manajemen Pengguna dan Role. Dibangun dengan **Next.js 14+ (App Router)**, **TypeScript**, **shadcn/ui**, dan **Tailwind CSS**, aplikasi ini menyediakan dashboard adaptif berbasis peran (jamaah, petugas, bendahara, admin, superadmin) dengan pengalaman pengguna yang modern, responsif, dan aksesibel.
@@ -42,6 +41,54 @@ Antarmuka pengguna untuk **Masjidfy** — platform manajemen masjid digital yang
 - **Node.js** versi 18 atau lebih baru
 - **npm** versi 9+ (atau yarn/pnpm)
 - Backend Masjidfy berjalan (default di `http://localhost:3000/api/v1` — lihat `.env.local`)
+
+---
+
+## 🔐 Tutorial Login
+
+Login menggunakan **username** (field: `username`). Field ini menerima **username atau email** (contoh nilai: `admin@masjidfy.local`).
+
+### Login sebagai Admin/Superadmin
+
+| Field | Nilai |
+|-------|-------|
+| Username atau Email | `admin@masjidfy.local` |
+| Password | `admin123` |
+
+Setelah login berhasil, Anda akan diarahkan ke halaman Dashboard dengan tampilan sesuai role (**superadmin** + **admin**).
+
+### Registrasi
+
+Pengguna baru dapat mendaftar melalui halaman `/register` dengan mengisi:
+- **Nama Lengkap**
+- **Username** (min. 3 karakter)
+- **Email**
+- **Password** (min. 6 karakter)
+- **Nomor Telepon**
+
+### Sistem Role & Dampaknya pada Tampilan
+
+Masjidfy memiliki **7 role** yang mengontrol akses menu dan fitur di dashboard:
+
+| Role | Akses Utama |
+|------|-------------|
+| `jamaah` | Profil, histori qurban/zakat pribadi |
+| `petugas_qurban` | Manajemen hewan qurban, pendaftaran, distribusi |
+| `petugas_zakat` | Penerimaan ZIS, data muzakki & mustahiq |
+| `bendahara` | Laporan keuangan, verifikasi pembayaran |
+| `penulis` | Blog: tulis & kelola artikel sendiri |
+| `admin` | Semua modul + manajemen pengguna |
+| `superadmin` | Semua akses + manajemen role & permission |
+
+Setiap pengguna bisa memiliki **lebih dari satu role** (misal: `admin` + `petugas_qurban`). Role memengaruhi:
+
+1. **Sidebar menu** — Menu yang tidak sesuai role akan disembunyikan.
+2. **Aksi di halaman** — Tombol "Verifikasi", "Edit", atau "Hapus" hanya muncul jika role pengguna memiliki permission yang sesuai.
+3. **Rute dashboard** — Mengakses URL yang tidak diizinkan akan menampilkan halaman **403 Forbidden**.
+
+Mock user `admin@masjidfy.local` memiliki role **`superadmin`** + **`admin`**, sehingga melihat seluruh menu dan aksi yang tersedia.
+
+> **Catatan**: Prototype saat ini menggunakan **Mock API** — semua data bersifat lokal dan tidak tersimpan secara persisten. Autentikasi diverifikasi terhadap kredensial statis di atas. Setelah prototipe, ganti ke backend nyata dengan menghapus `enableMockApi(apiClient)` di `src/providers/providers.tsx`.
 
 ---
 
@@ -93,7 +140,8 @@ masjidfy-frontend/
 ├── public/                     # Aset statis
 ├── src/
 │   ├── app/                    # Rute Next.js (App Router)
-│   │   ├── (public)/           # Rute publik: login, register, blog, kalkulator
+│   │   ├── (auth)/             # Rute autentikasi: login, register (tanpa navbar/footer)
+│   │   ├── (public)/           # Rute publik: blog, kalkulator, tentang
 │   │   ├── (dashboard)/        # Rute dengan autentikasi & sidebar
 │   │   │   ├── qurban/
 │   │   │   ├── zakat/
@@ -184,4 +232,3 @@ Proyek ini dilisensikan di bawah [MIT License](LICENSE).
 ---
 
 **Dibangun dengan ❤️ untuk kemaslahatan umat.**
-```

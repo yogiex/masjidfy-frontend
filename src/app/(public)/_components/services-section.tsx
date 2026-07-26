@@ -31,8 +31,8 @@ const services = [
 
 function ServicesSection() {
   return (
-    <section id="layanan" className="scroll-mt-20 px-4 py-16">
-      <div className="mx-auto max-w-6xl">
+    <section id="layanan" className="scroll-mt-20 px-4 md:px-8 lg:px-16 xl:px-24 py-16">
+      <div className="mx-auto max-w-7xl">
         <div className="mb-10 text-center">
           <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
             Layanan Utama

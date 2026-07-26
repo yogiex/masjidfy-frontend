@@ -10,27 +10,27 @@ import { MasjidSilhouette } from "@/components/shared/masjid-silhouette"
 
 const strukturData = {
   penasehat: [
-    { nama: "KH. Ahmad Fauzi" },
-    { nama: "Prof. Dr. Budi Santoso" },
-    { nama: "Ust. Deni Pratama" },
+    { nama: "Contoh_Penasehat_1" },
+    { nama: "Contoh_Penasehat_2" },
+    { nama: "Contoh_Penasehat_3" },
   ],
-  ketua: { nama: "H. Abdullah Karim" },
-  sekretaris: { nama: "Muhammad Rizki" },
-  bendaharaI: { nama: "Citra Dewi" },
-  bendaharaII: { nama: "Fahrul Hadi" },
+  ketua: { nama: "Contoh_Ketua" },
+  sekretaris: { nama: "Contoh_Sekretaris" },
+  bendaharaI: { nama: "Contoh_Bendahara_I" },
+  bendaharaII: { nama: "Contoh_Bendahara_II" },
 }
 
 const bidangData = [
   {
     icon: "🕌",
     nama: "Ibadah",
-    ketua: "Ahmad Fauzi",
+    ketua: "Contoh_Nama_1",
     anggota: [
-      { nama: "Budi Santoso", jabatan: "Koordinator" },
-      { nama: "Citra Dewi", jabatan: "Anggota" },
-      { nama: "Deni Pratama", jabatan: "Anggota" },
-      { nama: "Eka Rahmawati", jabatan: "Anggota" },
-      { nama: "Fahrul Hadi", jabatan: "Anggota" },
+      { nama: "Contoh_Nama_2", jabatan: "Koordinator" },
+      { nama: "Contoh_Nama_3", jabatan: "Anggota" },
+      { nama: "Contoh_Nama_4", jabatan: "Anggota" },
+      { nama: "Contoh_Nama_5", jabatan: "Anggota" },
+      { nama: "Contoh_Nama_6", jabatan: "Anggota" },
     ],
     tugas: [
       "Mengatur jadwal imam dan muadzin",
@@ -41,11 +41,11 @@ const bidangData = [
   {
     icon: "📚",
     nama: "Pendidikan",
-    ketua: "Budi Santoso",
+    ketua: "Contoh_Nama_2",
     anggota: [
-      { nama: "Ahmad Fauzi", jabatan: "Koordinator" },
-      { nama: "Gita Permata", jabatan: "Anggota" },
-      { nama: "Hendra Gunawan", jabatan: "Anggota" },
+      { nama: "Contoh_Nama_1", jabatan: "Koordinator" },
+      { nama: "Contoh_Nama_7", jabatan: "Anggota" },
+      { nama: "Contoh_Nama_8", jabatan: "Anggota" },
     ],
     tugas: [
       "Mengelola TPA dan TPQ",
@@ -56,12 +56,12 @@ const bidangData = [
   {
     icon: "🤝",
     nama: "Sosial",
-    ketua: "Citra Dewi",
+    ketua: "Contoh_Nama_3",
     anggota: [
-      { nama: "Budi Santoso", jabatan: "Koordinator" },
-      { nama: "Indra Wijaya", jabatan: "Anggota" },
-      { nama: "Joko Susilo", jabatan: "Anggota" },
-      { nama: "Kartika Sari", jabatan: "Anggota" },
+      { nama: "Contoh_Nama_2", jabatan: "Koordinator" },
+      { nama: "Contoh_Nama_9", jabatan: "Anggota" },
+      { nama: "Contoh_Nama_10", jabatan: "Anggota" },
+      { nama: "Contoh_Nama_11", jabatan: "Anggota" },
     ],
     tugas: [
       "Menyalurkan bantuan sosial",
@@ -72,11 +72,11 @@ const bidangData = [
   {
     icon: "🧹",
     nama: "Pemuda & Sarana",
-    ketua: "Deni Pratama",
+    ketua: "Contoh_Nama_4",
     anggota: [
-      { nama: "Ahmad Fauzi", jabatan: "Koordinator" },
-      { nama: "Luki Firmansyah", jabatan: "Anggota" },
-      { nama: "Mega Wati", jabatan: "Anggota" },
+      { nama: "Contoh_Nama_1", jabatan: "Koordinator" },
+      { nama: "Contoh_Nama_12", jabatan: "Anggota" },
+      { nama: "Contoh_Nama_13", jabatan: "Anggota" },
     ],
     tugas: [
       "Merawat dan menjaga kebersihan masjid",
@@ -96,7 +96,7 @@ function StrukturOrganisasiPage() {
   }
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8 space-y-8">
+    <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16 xl:px-24 py-8 space-y-8">
       {/* Breadcrumb */}
       <nav className="flex items-center gap-1 text-sm text-muted-foreground">
         <a href="/" className="hover:text-foreground transition-colors">

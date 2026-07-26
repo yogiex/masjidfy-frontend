@@ -12,7 +12,7 @@ const articleData: Record<string, {
   "keutamaan-berkurban": {
     title: "Keutamaan Berkurban di Hari Raya",
     category: "Keislaman",
-    author: "Ahmad Fauzi",
+    author: "Contoh_Nama_01",
     date: "01 Juni 2026",
     reads: 234,
     content: `
@@ -35,7 +35,7 @@ const articleData: Record<string, {
   "panduan-shalat-idul-adha": {
     title: "Panduan Shalat Idul Adha",
     category: "Ibadah",
-    author: "Budi Santoso",
+    author: "Contoh_Nama_02",
     date: "28 Mei 2026",
     reads: 189,
     content: "<h2>Tata Cara Shalat Idul Adha</h2><p>Shalat Idul Adha dikerjakan pada pagi hari tanggal 10 Dzulhijjah. Berikut tata caranya...</p>",
@@ -44,12 +44,16 @@ const articleData: Record<string, {
   "cara-menghitung-zakat-maal": {
     title: "Cara Menghitung Zakat Maal",
     category: "Zakat",
-    author: "Citra Dewi",
+    author: "Contoh_Nama_03",
     date: "20 Mei 2026",
     reads: 156,
     content: "<h2>Zakat Maal</h2><p>Zakat maal adalah zakat yang dikeluarkan dari harta yang dimiliki. Nisab zakat maal setara dengan 85 gram emas...</p>",
     tags: ["Zakat", "Harta"],
   },
+}
+
+export function generateStaticParams() {
+  return Object.keys(articleData).map((slug) => ({ slug }))
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
@@ -60,9 +64,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 const relatedArticles = [
-  { slug: "panduan-zakat-fitrah", category: "Zakat", title: "Panduan Zakat Fitrah", excerpt: "Zakat fitrah wajib dikeluarkan setiap muslim...", author: "Budi Santoso", date: "05/05/2026" },
-  { slug: "keistimewaan-bulan-ramadhan", category: "Keislaman", title: "Keistimewaan Bulan Ramadhan", excerpt: "Bulan Ramadhan adalah bulan yang penuh berkah...", author: "Ahmad Fauzi", date: "10/05/2026" },
-  { slug: "hikmah-ibadah-haji", category: "Keislaman", title: "Hikmah Ibadah Haji bagi Umat Islam", excerpt: "Haji merupakan rukun Islam kelima...", author: "Deni Pratama", date: "15/05/2026" },
+  { slug: "panduan-zakat-fitrah", category: "Zakat", title: "Panduan Zakat Fitrah", excerpt: "Zakat fitrah wajib dikeluarkan setiap muslim...", author: "Contoh_Nama_02", date: "05/05/2026" },
+  { slug: "keistimewaan-bulan-ramadhan", category: "Keislaman", title: "Keistimewaan Bulan Ramadhan", excerpt: "Bulan Ramadhan adalah bulan yang penuh berkah...", author: "Contoh_Nama_01", date: "10/05/2026" },
+  { slug: "hikmah-ibadah-haji", category: "Keislaman", title: "Hikmah Ibadah Haji bagi Umat Islam", excerpt: "Haji merupakan rukun Islam kelima...", author: "Contoh_Nama_04", date: "15/05/2026" },
 ]
 
 export default async function BlogDetailPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -71,7 +75,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
 
   if (!article) {
     return (
-      <div className="mx-auto max-w-6xl px-4 py-16 text-center">
+      <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16 xl:px-24 py-16 text-center">
         <h1 className="text-2xl font-bold">Artikel Tidak Ditemukan</h1>
         <p className="mt-2 text-muted-foreground">Artikel yang Anda cari tidak tersedia.</p>
         <Link href="/blog" className="mt-4 inline-flex items-center gap-1 text-sm text-primary hover:underline">
@@ -84,7 +88,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
   const url = `${process.env.NEXT_PUBLIC_URL || "https://masjidfy.app"}/blog/${slug}`
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8">
+    <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-16 xl:px-24 py-8">
       <div className="mb-6 text-sm text-muted-foreground">
         <Link href="/blog" className="hover:text-foreground">Blog</Link>
         <span className="mx-2">›</span>
@@ -93,7 +97,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
         <span className="text-foreground">{article.title}</span>
       </div>
 
-      <article className="mx-auto max-w-3xl">
+      <article className="max-w-3xl">
         <div className="space-y-4">
           <span className="inline-block rounded-full bg-primary/10 px-3 py-0.5 text-xs font-medium text-primary">
             {article.category}

@@ -1,8 +1,10 @@
 # Software Requirements Specification (SRS) – Masjidfy Frontend
 
-**Versi:** 1.0  
-**Tanggal:** 31 Mei 2026  
+**Versi:** 1.1  
+**Tanggal:** 6 Juni 2026  
 **Tim:** System Analyst & Frontend Developer  
+
+> **Catatan Implementasi MVP:** Semua halaman dashboard sudah dibangun dengan dummy data. Auth guard aktif. Role-aware widgets sudah berfungsi. Zod validation dan API integration menyusul.  
 
 ---
 
@@ -170,7 +172,8 @@ Fungsi utama aplikasi meliputi:
 
 #### 3.3.6 Distribusi Daging Qurban (Petugas, Admin)
 - **Deskripsi**: Mencatat distribusi daging per hewan yang sudah dipotong.
-- **Alur**: Pilih hewan, tambahkan distribusi: nama penerima, jumlah kupon, tanggal. Submit `POST /qurban/distributions`.
+- **Alur**: Pilih hewan (dropdown dari daftar hewan), tambahkan distribusi: nama penerima, jumlah kupon, tanggal. Submit `POST /qurban/distributions`.
+- **Status MVP**: Dropdown pilih hewan sudah menggunakan data dummy.
 
 ### 3.4 Modul Zakat
 
@@ -186,6 +189,7 @@ Fungsi utama aplikasi meliputi:
 
 #### 3.4.4 Penyaluran Zakat (Bendahara, Admin, Petugas)
 - **Deskripsi**: Mencatat penyaluran dana ZIS ke mustahiq. Pilih mustahiq (harus terverifikasi), jumlah, tanggal.
+- **Status MVP**: Dropdown pilih mustahiq sudah menggunakan data dummy.
 
 #### 3.4.5 Laporan Keuangan ZIS (Bendahara, Admin)
 - **Deskripsi**: Halaman laporan dengan filter tahun, bulan. Menampilkan ringkasan total penerimaan, penyaluran, dan saldo. Gunakan `GET /zakat/reports`.
@@ -208,11 +212,12 @@ Fungsi utama aplikasi meliputi:
 ### 3.6 Dashboard Beranda
 
 - **Widget Peran**:
-  - **Jamaah**: Jumlah pendaftaran qurban aktif, status pembayaran terakhir, artikel terbaru, pintasan kalkulator zakat.
-  - **Petugas**: Jumlah pendaftaran pending, jadwal pemotongan, stok hewan.
-  - **Bendahara**: Total penerimaan ZIS bulan ini, total pembayaran qurban, grafik ringkas.
-  - **Admin**: Statistik pengguna aktif, konten blog, komentar pending, link cepat ke manajemen.
-- Widget diimplementasikan sebagai **StatCard** yang datanya diambil dari endpoint list dengan limit tertentu, atau endpoint summary (jika tersedia).
+  - **Jamaah**: Pendaftaran Saya, Transaksi ZIS, Total Pembayaran.
+  - **Bendahara**: Total Pemasukan ZIS, Total Penyaluran, Pembayaran Qurban, Sisa Saldo ZIS.
+  - **Admin/Superadmin**: Total Pengguna, Pendaftaran Pending, Hewan Tersedia, Total Terdaftar.
+  - **Default (role lain)**: Pendaftaran Pending, Hewan Tersedia, Pembayaran Terkumpul, Total Terdaftar.
+- Widget diimplementasikan sebagai **StatCard** dengan data dummy dan conditional rendering berdasarkan `useAuth().hasRole()`.
+- **Auth Guard**: Dashboard layout redirect ke `/login` jika `isAuthenticated` false.
 
 ---
 
@@ -248,7 +253,7 @@ Fungsi utama aplikasi meliputi:
 - Token JWT tidak disimpan di cookie atau URL; hanya localStorage (risiko XSS diakui, mitigasi dengan Content Security Policy).
 - Semua input divalidasi dengan Zod sebelum dikirim.
 - Tidak ada konten HTML mentah yang di-render tanpa sanitasi (mencegah XSS).
-- Halaman dashboard dilindungi pengecekan `isAuthenticated`.
+- Halaman dashboard dilindungi pengecekan `isAuthenticated` (sudah diimplementasikan di dashboard layout — redirect ke `/login`).
 - Role-based rendering di sisi klien sebagai lapisan pertama, backend tetap sebagai penjaga utama.
 
 ### 5.3 Usability

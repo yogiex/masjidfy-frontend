@@ -17,13 +17,13 @@ interface Comment {
 }
 
 const dummy: Comment[] = [
-  { id: 1, author: "Budi Santoso", content: "Alhamdulillah artikelnya bermanfaat, mohon izin share ustadz", post: "Keutamaan Berkurban", status: "pending", date: "01/06/2026" },
-  { id: 2, author: "Citra Dewi", content: "Kapan pendaftaran qurban dibuka?", post: "Panduan Qurban", status: "pending", date: "31/05/2026" },
-  { id: 3, author: "Deni Pratama", content: "Assalamu'alaikum, apakah ada kajian rutin?", post: "Jadwal Kajian", status: "approved", date: "30/05/2026" },
-  { id: 4, author: "Eka Putri", content: "Komentar spam mengandung link mencurigakan", post: "Tata Cara Shalat", status: "rejected", date: "29/05/2026" },
-  { id: 5, author: "Fajar Hidayat", content: "Mohon informasi lebih lanjut mengenai zakat mal", post: "Panduan Zakat", status: "pending", date: "28/05/2026" },
-  { id: 6, author: "Gita Permata", content: "Terima kasih, sangat membantu!", post: "Hikmah Ibadah Haji", status: "approved", date: "27/05/2026" },
-  { id: 7, author: "Hadi Sucipto", content: "Artikelnya kurang lengkap, mohon ditambahkan referensi", post: "Puasa Sunnah", status: "pending", date: "26/05/2026" },
+  { id: 1, author: "Contoh_Nama_02", content: "Alhamdulillah artikelnya bermanfaat, mohon izin share ustadz", post: "Keutamaan Berkurban", status: "pending", date: "01/06/2026" },
+  { id: 2, author: "Contoh_Nama_03", content: "Kapan pendaftaran qurban dibuka?", post: "Panduan Qurban", status: "pending", date: "31/05/2026" },
+  { id: 3, author: "Contoh_Nama_04", content: "Assalamu'alaikum, apakah ada kajian rutin?", post: "Jadwal Kajian", status: "approved", date: "30/05/2026" },
+  { id: 4, author: "Contoh_Nama_05", content: "Komentar spam mengandung link mencurigakan", post: "Tata Cara Shalat", status: "rejected", date: "29/05/2026" },
+  { id: 5, author: "Contoh_Nama_06", content: "Mohon informasi lebih lanjut mengenai zakat mal", post: "Panduan Zakat", status: "pending", date: "28/05/2026" },
+  { id: 6, author: "Contoh_Nama_07", content: "Terima kasih, sangat membantu!", post: "Hikmah Ibadah Haji", status: "approved", date: "27/05/2026" },
+  { id: 7, author: "Contoh_Nama_08", content: "Artikelnya kurang lengkap, mohon ditambahkan referensi", post: "Puasa Sunnah", status: "pending", date: "26/05/2026" },
 ]
 
 const statusColors: Record<string, "default" | "outline" | "secondary" | "destructive"> = {

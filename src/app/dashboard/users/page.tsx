@@ -18,18 +18,18 @@ interface User {
 }
 
 const dummyUsers: User[] = [
-  { id: 1, name: "Ahmad Fauzi", username: "ahmad12", email: "ahmad@email.com", status: "aktif", role: "admin" },
-  { id: 2, name: "Budi Santoso", username: "budi34", email: "budi@email.com", status: "nonaktif", role: "jamaah" },
-  { id: 3, name: "Citra Dewi", username: "citra56", email: "citra@email.com", status: "aktif", role: "bendahara" },
-  { id: 4, name: "Deni Pratama", username: "deni78", email: "deni@email.com", status: "aktif", role: "petugas_qurban" },
-  { id: 5, name: "Eka Putri", username: "eka90", email: "eka@email.com", status: "aktif", role: "petugas_zakat" },
-  { id: 6, name: "Fajar Hidayat", username: "fajar11", email: "fajar@email.com", status: "nonaktif", role: "penulis" },
-  { id: 7, name: "Gita Permata", username: "gita22", email: "gita@email.com", status: "aktif", role: "jamaah" },
-  { id: 8, name: "Hadi Sucipto", username: "hadi33", email: "hadi@email.com", status: "aktif", role: "superadmin" },
-  { id: 9, name: "Indah Lestari", username: "indah44", email: "indah@email.com", status: "aktif", role: "jamaah" },
-  { id: 10, name: "Joko Widodo", username: "joko55", email: "joko@email.com", status: "nonaktif", role: "jamaah" },
-  { id: 11, name: "Kartika Sari", username: "kartika66", email: "kartika@email.com", status: "aktif", role: "bendahara" },
-  { id: 12, name: "Lutfi Hakim", username: "lutfi77", email: "lutfi@email.com", status: "aktif", role: "petugas_qurban" },
+  { id: 1, name: "Contoh_Nama_01", username: "contoh01", email: "contoh01@email.com", status: "aktif", role: "admin" },
+  { id: 2, name: "Contoh_Nama_02", username: "contoh02", email: "contoh02@email.com", status: "nonaktif", role: "jamaah" },
+  { id: 3, name: "Contoh_Nama_03", username: "contoh03", email: "contoh03@email.com", status: "aktif", role: "bendahara" },
+  { id: 4, name: "Contoh_Nama_04", username: "contoh04", email: "contoh04@email.com", status: "aktif", role: "petugas_qurban" },
+  { id: 5, name: "Contoh_Nama_05", username: "contoh05", email: "contoh05@email.com", status: "aktif", role: "petugas_zakat" },
+  { id: 6, name: "Contoh_Nama_06", username: "contoh06", email: "contoh06@email.com", status: "nonaktif", role: "penulis" },
+  { id: 7, name: "Contoh_Nama_07", username: "contoh07", email: "contoh07@email.com", status: "aktif", role: "jamaah" },
+  { id: 8, name: "Contoh_Nama_08", username: "contoh08", email: "contoh08@email.com", status: "aktif", role: "superadmin" },
+  { id: 9, name: "Contoh_Nama_09", username: "contoh09", email: "contoh09@email.com", status: "aktif", role: "jamaah" },
+  { id: 10, name: "Contoh_Nama_10", username: "contoh10", email: "contoh10@email.com", status: "nonaktif", role: "jamaah" },
+  { id: 11, name: "Contoh_Nama_11", username: "contoh11", email: "contoh11@email.com", status: "aktif", role: "bendahara" },
+  { id: 12, name: "Contoh_Nama_12", username: "contoh12", email: "contoh12@email.com", status: "aktif", role: "petugas_qurban" },
 ]
 
 const statusColors: Record<string, "default" | "outline" | "secondary" | "destructive"> = {

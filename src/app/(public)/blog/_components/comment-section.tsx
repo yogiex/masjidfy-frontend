@@ -18,14 +18,14 @@ interface Comment {
 const dummyComments: Comment[] = [
   {
     id: 1,
-    author: "Budi Santoso",
+    author: "Contoh_Nama_02",
     date: "02 Juni 2026",
     content: "Alhamdulillah, artikel yang sangat bermanfaat. Mohon izin untuk share ustadz.",
     likes: 3,
     replies: [
       {
         id: 2,
-        author: "Ahmad Fauzi",
+        author: "Contoh_Nama_01",
         date: "02 Juni 2026",
         content: "Wa'alaikumsalam, silakan dishare. Jazakallah khair.",
         likes: 1,
@@ -35,7 +35,7 @@ const dummyComments: Comment[] = [
   },
   {
     id: 3,
-    author: "Citra Dewi",
+    author: "Contoh_Nama_03",
     date: "03 Juni 2026",
     content: "Kapan pendaftaran qurban tahun ini dibuka?",
     likes: 0,
@@ -62,7 +62,7 @@ export function CommentSection() {
           <span className="flex h-7 w-7 items-center justify-center rounded-full bg-muted text-xs font-medium">
             A
           </span>
-          <span className="font-medium">Ahmad Fauzi</span>
+          <span className="font-medium">Contoh_Nama_01</span>
         </div>
         <Textarea placeholder="Tulis komentar..." className="min-h-[80px]" />
         <div className="flex justify-end">

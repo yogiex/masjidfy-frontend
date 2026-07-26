@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button"
 
 function CTASection() {
   return (
-    <section className="px-4 py-16">
-      <div className="mx-auto max-w-6xl">
+    <section className="px-4 md:px-8 lg:px-16 xl:px-24 py-16">
+      <div className="mx-auto max-w-7xl">
         <div className="rounded-2xl bg-gradient-to-br from-primary to-primary/80 px-6 py-12 text-center text-primary-foreground sm:px-12 sm:py-16">
           <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
             Siap Memudahkan Ibadah?
