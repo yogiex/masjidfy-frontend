@@ -1,0 +1,9 @@
+1:"$Sreact.fragment"
+2:I[47257,["/masjidfy-frontend/_next/static/chunks/0sdrah9..k2fz.js","/masjidfy-frontend/_next/static/chunks/0ozea5j3l1_3c.js","/masjidfy-frontend/_next/static/chunks/0d3shmwh5_nmn.js"],"ClientPageRoot"]
+3:I[98011,["/masjidfy-frontend/_next/static/chunks/0sdrah9..k2fz.js","/masjidfy-frontend/_next/static/chunks/0ozea5j3l1_3c.js","/masjidfy-frontend/_next/static/chunks/0d3shmwh5_nmn.js","/masjidfy-frontend/_next/static/chunks/073--gj_ycmin.js","/masjidfy-frontend/_next/static/chunks/0ryg.p431gzt..js","/masjidfy-frontend/_next/static/chunks/0g01l.l5h~i5a.js","/masjidfy-frontend/_next/static/chunks/0i8kaamt-pk6r.js","/masjidfy-frontend/_next/static/chunks/05-g9m-g8fnzo.js"],"default"]
+6:I[97367,["/masjidfy-frontend/_next/static/chunks/0sdrah9..k2fz.js","/masjidfy-frontend/_next/static/chunks/0ozea5j3l1_3c.js","/masjidfy-frontend/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/masjidfy-frontend/_next/static/chunks/05-g9m-g8fnzo.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"cJJb5HuI-0O5SzmF1ZwWp"}
+4:{}
+5:"$0:rsc:props:children:0:props:serverProvidedParams:params"
+8:null
